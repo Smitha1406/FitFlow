@@ -16,6 +16,6 @@ This project contains three responsive pages demonstrating:
 - `index.html` — Home (SVG + Canvas + Modal)
 - `workouts.html` — Workouts (cards, pseudo selectors)
 - `nutrition.html` — Nutrition (SVG plate diagram)
-- `styles/custom.css` — custom CSS additions
-- `scripts/main.js` — JS for navigation, modal, canvas
+- `custom.css` — custom CSS additions
+- `main.js` — JS for navigation, modal, canvas
 
