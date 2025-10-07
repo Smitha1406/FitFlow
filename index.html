@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitFlow — Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body class="font-sans" style="font-family: 'Poppins', sans-serif;">
+  <header class="bg-gradient-to-r from-green-400 to-blue-400 text-white">
+    <nav class="max-w-5xl mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="text-2xl font-bold">FitFlow</a>
+      <button id="nav-toggle" class="md:hidden text-2xl" aria-label="toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul id="nav-links" class="hidden md:flex gap-6 items-center">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="workouts.html">Workouts</a></li>
+        <li><a class="nav-link" href="nutrition.html">Nutrition</a></li>
+        <li><button id="open-modal" class="btn-primary">Join</button></li>
+      </ul>
+    </nav>
+    <div id="mobile-menu" class="md:hidden hidden p-4">
+      <a class="block py-2 nav-link" href="index.html">Home</a>
+      <a class="block py-2 nav-link" href="workouts.html">Workouts</a>
+      <a class="block py-2 nav-link" href="nutrition.html">Nutrition</a>
+      <button id="open-modal-2" class="btn-primary mt-2">Join</button>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6">
+    <section class="grid md:grid-cols-2 gap-6 items-center my-8">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Move better. Eat better. Live better.</h1>
+        <p class="mt-4 text-lg">FitFlow helps you build sustainable fitness habits — workouts, plans and simple nutrition guides.</p>
+        <div class="mt-6 flex gap-4">
+          <a href="workouts.html" class="btn-secondary">Explore Workouts</a>
+          <a href="nutrition.html" class="btn-ghost">Nutrition Tips</a>
+        </div>
+      </div>
+      <div class="rounded-lg shadow-lg p-4 bg-white">
+        <svg viewBox="0 0 200 200" class="w-full h-64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0%" stop-color="#34D399" />
+              <stop offset="100%" stop-color="#60A5FA" />
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="200" height="200" rx="12" fill="url(#g1)"></rect>
+          <g transform="translate(30,30)" fill="#fff">
+            <circle cx="30" cy="30" r="18" opacity="0.9" />
+            <rect x="65" y="22" width="40" height="16" rx="4" opacity="0.95"></rect>
+            <path d="M10 80 q30 -40 60 0" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" />
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section class="my-8">
+      <h2 class="text-2xl font-semibold">Mini interactive: Canvas warm-up</h2>
+      <p class="text-sm">A simple canvas that draws animated circles to simulate heart-rate pulses.</p>
+      <canvas id="pulseCanvas" width="600" height="200" class="w-full rounded-lg shadow-md mt-4"></canvas>
+    </section>
+
+    <section class="my-12 grid md:grid-cols-3 gap-6">
+      <article class="p-4 rounded-lg shadow-sm border">
+        <h3 class="font-semibold">Daily Stretch</h3>
+        <p class="text-sm mt-2">5-minute stretch routine to kickstart mobility.</p>
+      </article>
+      <article class="p-4 rounded-lg shadow-sm border">
+        <h3 class="font-semibold">HIIT 20</h3>
+        <p class="text-sm mt-2">High intensity interval training for a quick metabolic boost.</p>
+      </article>
+      <article class="p-4 rounded-lg shadow-sm border">
+        <h3 class="font-semibold">Calm Yoga</h3>
+        <p class="text-sm mt-2">Slow-flow to relax and recover.</p>
+      </article>
+    </section>
+  </main>
+
+  <div id="modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/40">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 relative">
+      <button id="close-modal" class="absolute top-4 right-4 text-gray-500"><i class="fa-solid fa-xmark"></i></button>
+      <h3 class="text-xl font-bold">Join FitFlow</h3>
+      <p class="mt-2 text-sm">Sign up for a free 7-day plan.</p>
+      <form class="mt-4 grid gap-3">
+        <input class="input" type="text" placeholder="Your name" required>
+        <input class="input" type="email" placeholder="Email address" required>
+        <button class="btn-primary">Get Started</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="bg-gray-100 mt-12 py-6">
+    <div class="max-w-5xl mx-auto text-sm text-gray-600 flex flex-col md:flex-row justify-between gap-4">
+      <div>© FitFlow 2025</div>
+      <div>Built with Tailwind • SVG • Canvas • Custom CSS</div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

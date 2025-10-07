@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FitFlow — Workouts</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="custom.css">
+</head>
+<body style="font-family: 'Poppins', sans-serif;">
+  <header class="bg-gradient-to-r from-green-400 to-blue-400 text-white">
+    <nav class="max-w-5xl mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="text-2xl font-bold">FitFlow</a>
+      <ul class="hidden md:flex gap-6 items-center">
+        <li><a class="nav-link" href="index.html">Home</a></li>
+        <li><a class="nav-link" href="workouts.html">Workouts</a></li>
+        <li><a class="nav-link" href="nutrition.html">Nutrition</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6">
+    <h1 class="text-3xl font-bold">Workouts</h1>
+    <p class="text-sm mt-2">Choose a workout plan tailored to your time and goal.</p>
+
+    <section class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <article class="card">
+        <h3>Beginner Full Body</h3>
+        <p class="muted">30 min — Equipment: Bodyweight</p>
+        <button class="btn-outline mt-4">Start</button>
+      </article>
+      <article class="card">
+        <h3>Strength Builder</h3>
+        <p class="muted">45 min — Dumbbells</p>
+        <button class="btn-outline mt-4">Start</button>
+      </article>
+      <article class="card">
+        <h3>Quick HIIT</h3>
+        <p class="muted">20 min — No equipment</p>
+        <button class="btn-outline mt-4">Start</button>
+      </article>
+      <article class="card">
+        <h3>Core Focus</h3>
+        <p class="muted">15 min — Mat</p>
+        <button class="btn-outline mt-4">Start</button>
+      </article>
+      <article class="card">
+        <h3>Leg Day</h3>
+        <p class="muted">50 min — Barbell optional</p>
+        <button class="btn-outline mt-4">Start</button>
+      </article>
+    </section>
+  </main>
+
+  <footer class="bg-gray-100 mt-12 py-6">
+    <div class="max-w-5xl mx-auto text-sm text-gray-600">© FitFlow 2025</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

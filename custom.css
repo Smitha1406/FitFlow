@@ -1,0 +1,84 @@
+/* custom.css — complements Tailwind for specific features */
+/* relative units: rem, em used across */
+:root{
+  --radius: 0.5rem;
+  --accent: #10b981;
+  --muted: #6b7280;
+}
+
+/* Buttons */
+.btn-primary{
+  @apply bg-green-500 text-white py-2 px-4 rounded-lg shadow;
+}
+.btn-secondary{
+  @apply bg-white border border-green-500 text-green-600 py-2 px-4 rounded-lg shadow-sm;
+}
+.btn-ghost{
+  @apply bg-transparent border border-white/30 text-white py-2 px-4 rounded-lg;
+}
+.btn-outline{
+  padding: 0.6rem 0.9rem;
+  border: 1px solid rgba(16,185,129,0.2);
+  border-radius: calc(var(--radius) * 1.2);
+  background: linear-gradient(180deg, rgba(255,255,255,0.5), rgba(255,255,255,0.2));
+  transition: transform .18s ease, box-shadow .18s ease;
+  font-weight:600;
+}
+
+/* Card */
+.card{
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+  border: 1px solid rgba(16,24,40,0.04);
+}
+
+/* pseudo selectors */
+.card:hover{
+  transform: translateY(-6px);
+  transition: transform .25s ease;
+}
+.card:focus-within{
+  outline: 3px solid rgba(16,185,129,0.12);
+}
+
+/* inputs and modal */
+.input{
+  padding: .6rem .8rem;
+  border-radius: .5rem;
+  border: 1px solid #e5e7eb;
+}
+#modal .input:focus{
+  box-shadow: 0 4px 18px rgba(59,130,246,0.12);
+  outline: none;
+}
+
+/* typography */
+.muted{ color: var(--muted); font-size: 0.95rem; }
+
+/* media query example (custom, not only Tailwind) */
+@media (max-width: 640px){
+  h1{ font-size: 1.6rem; }
+}
+
+/* animations */
+@keyframes floaty {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+.card { animation: floaty 6s ease-in-out infinite; }
+
+/* accessible focus state for nav links */
+.nav-link:focus, .nav-link:hover{
+  text-decoration: underline;
+  outline: none;
+}
+
+/* relative units usage */
+h1{ font-size: 2.5rem; } /* uses rem relative to root */
+p{ font-size: 1rem; line-height:1.5rem; }
+
+/* small helper */
+.hidden{ display:none; }
